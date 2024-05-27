@@ -1,0 +1,142 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: sans-serif;
+}
+
+/* Navigation Bar */
+.position {
+  background: url(hexagon.jpg);
+}
+
+.navbar {
+  text-align: center; 
+}
+
+.navbar ul {
+  list-style-type: none;
+  overflow: hidden;
+  height: 90px;
+  display: inline-block; 
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 40px;
+  display: block;
+  font-size: xx-large;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+}
+  
+.navbar a:hover {
+  background-color: rgb(137, 137, 226);
+}
+  
+.navbar li {
+  float: left;
+}
+
+/*Main Content*/
+#database {
+  background: url(bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.main {
+  font-size: xx-large;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bolder;
+  color: white;
+  padding: 30px;
+}
+
+/*Image Gallery*/
+.gallery1 {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.grid {
+  flex: 0 0 auto;
+  height: 500px;
+  margin: 20px;
+  box-shadow: 5px 5px 20px black;
+  overflow: hidden;
+  background: transparent;
+  position: relative; 
+}
+
+img {
+  height: 500px;
+  width: 350px;
+  border-radius: 3px;
+  transition: transform 0.5s;
+  animation: slideInRight 0.5s ease-in-out;
+}
+
+.data {
+  height: 200px;
+  width: 350px;
+  padding: 6px;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0;
+  background: rgba(27, 27, 27, 0.5);
+  color: white;
+  transition: height 0.5s;
+}
+
+h2 {
+  margin: 10px;
+  font-size: 40px;
+}
+
+p {
+  font-size: 20px;
+  margin: 20px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+span {
+  font-weight: bold;
+}
+
+/*Grid Effects*/
+.grid:hover {
+  cursor: pointer;
+}
+
+.grid:hover .data {
+  height: 220px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.grid:hover p {
+  opacity: 1;
+  visibility: visible;
+}
+
+.grid:hover img {
+  transform: scale(1.1) rotate(-3deg);
+}
+
+/* Slide In Animation */
+@keyframes slideInRight {
+  from {
+      transform: translateX(100%);
+      opacity: 0;
+  }
+  to {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
