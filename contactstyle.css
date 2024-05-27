@@ -1,0 +1,195 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navigation Bar */
+.position {
+    background: url(hexagon.jpg);
+}
+
+.navbar {
+    text-align: center;
+}
+
+.navbar ul {
+    list-style-type: none;
+    overflow: hidden;
+    height: 90px;
+    display: inline-block;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 40px;
+    display: block;
+    font-size: xx-large;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.navbar a:hover {
+    background-color: rgb(137, 137, 226);
+}
+
+.navbar li {
+    float: left;
+}
+
+/* Main Content */
+#final {
+    background: url(bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 20px;
+    text-align: center;
+    animation: slideInFromBottom 1s ease-out;
+}
+
+.main {
+    font-size: xx-large;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    animation: slideInFromBottom 1s ease-out;
+}
+
+.description {
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    margin-bottom: 20px;
+    animation: slideInFromBottom 1s ease-out;
+}
+
+/* Feedback Section */
+.contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    animation: slideInFromBottom 1s ease-out;
+}
+
+.contact-form {
+    flex: 1;
+    min-width: 300px;
+}
+
+.form {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.form label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: medium;
+    color: #999;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.form input,
+.form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: medium;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form input:focus + label,
+.form input:not(:placeholder-shown) + label,
+.form textarea:focus + label,
+.form textarea:not(:placeholder-shown) + label {
+    top: -20px;
+    left: 5px;
+    font-size: small;
+    color: #333;
+}
+
+.button {
+    padding: 10px 20px;
+    font-size: medium;
+    color: white;
+    background-color: rgb(137, 137, 226);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: rgb(100, 100, 200);
+}
+
+.lastimage {
+    flex: 1;
+    min-width: 300px;
+    animation: slideInFromBottom 1s ease-out;
+}
+
+.lastimage img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Animation */
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Stay in Touch Section */
+.touch {
+    margin-top: 40px;
+    text-align: center;
+    animation: slideInFromBottom 1s ease-out;
+}
+
+.touch h2 {
+    font-size: x-large;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.touch p{
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    margin-bottom: 20px;
+    animation: slideInFromBottom 1s ease-out;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-links a {
+    font-size: xx-large;
+    color: white;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: rgb(137, 137, 226);
+}
