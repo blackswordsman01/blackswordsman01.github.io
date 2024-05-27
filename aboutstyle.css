@@ -1,0 +1,95 @@
+* {
+    margin: 0px;
+}
+
+/* Navigation Bar */
+.position {
+    background: url(hexagon.jpg);
+}
+
+.navbar {
+    text-align: center; 
+}
+
+.navbar ul {
+    list-style-type: none;
+    overflow: hidden;
+    height: 90px;
+    display: inline-block; 
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 40px;
+    display: block;
+    font-size: xx-large;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+    
+.navbar a:hover {
+    background-color: rgb(137, 137, 226);
+}
+    
+.navbar li {
+    float: left;
+}
+
+/* Heading */
+#overview {
+    background: url(bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.main {
+    font-size: xx-large;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    color: white;
+    padding: 30px;
+}
+
+/* Animations */
+@keyframes slideInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Content */
+#newworld,
+#create,
+#realistic {
+    display: flex;
+    padding: 50px;
+    justify-content: space-between;
+    flex-basis: 0%;
+    animation: slideInFromLeft 1s ease-in-out forwards; 
+}
+
+#newworld img,
+#create img,
+#realistic img {
+    height: 50%;
+    width: 50%;
+}
+
+#newworld p,
+#create p,
+#realistic p {
+    color: white;
+    font-size: large;
+    font-weight: bold;
+    flex-basis: 100%;
+    justify-content: center;
+    padding-left: 50px;
+    padding-top: 60px;
+}
