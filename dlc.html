@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DLC</title>
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="dlcstyle.css" />
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="position">
+            <!-- Navbar creation -->
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="dinosaur.html">Dinosaurs</a></li>
+                    <li><a href="game.html">Games</a></li>
+                    <li><a href="dlc.html">DLC</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Heading -->
+    <div id="dlcview">
+        <h1 class="main">DLC</h1>
+
+        <!-- Grid layout -->
+        <div class="grid-container">
+            <div class="grid-item" onclick="showPopup(1)">
+            <!--Image 1-->
+                <img src="deluxe.jpg" alt="deluxe">
+                <h2>Deluxe Upgrade Pack</h2>
+            </div>
+            <div class="grid-item" onclick="showPopup(2)">
+                <!--Image 2-->
+                <img src="early cretaceous.jpg" alt="early cretaceous">
+                <h2>Early Cretaceous Pack</h2>
+            </div>
+            <div class="grid-item" onclick="showPopup(3)">
+                <!--Image 3-->
+                <img src="camp cretaceous.jpg" alt="camp cretaceous">
+                <h2>Camp Cretaceous Pack</h2>
+            </div>
+            <div class="grid-item" onclick="showPopup(4)">
+                <!--Image 4-->
+                <img src="dominion biosyn.jpg" alt="dominion biosyn">
+                <h2>Dominion Biosyn Expansion</h2>
+            </div>
+            <div class="grid-item" onclick="showPopup(5)">
+                <!--Image 5-->
+                <img src="late cretaceous.jpg" alt="late cretaceous">
+                <h2>Late Cretaceous Pack</h2>
+            </div>
+            <div class="grid-item" onclick="showPopup(6)">
+                <!--Image 6-->
+                <img src="malta.jpg" alt="malta">
+                <h2>Dominion Malta Expansion</h2>
+            </div>
+            <div class="grid-item" onclick="showPopup(7)">
+                <!--Image 7-->
+                <img src="feathered.jpg" alt="feathered">
+                <h2>Feathered Species Pack</h2>
+            </div>
+            <div class="grid-item" onclick="showPopup(8)">
+                <!--Image 8-->
+                <img src="marine.jpg" alt="marine">
+                <h2>Prehistoric Marine Species Pack</h2>
+            </div>
+            <div class="grid-item" onclick="showPopup(9)">
+                <!--Image 9-->
+                <img src="predator.jpg" alt="predator">
+                <h2>Cretaceous Predator Pack</h2>
+            </div>
+            <div class="grid-item" onclick="showPopup(10)">
+                <!--Image 10-->
+                <img src="secret.jpg" alt="secret">
+                <h2>Secret Species Pack</h2>
+            </div>
+            <div class="grid-item" onclick="showPopup(11)">
+                <!--Image 11-->
+                <img src="manager.jpg" alt="manager">
+                <h2>Park Manager's Collection Pack</h2>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup Window -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <img id="popup-image" src="" alt="Popup Image">
+            <h2 id="popup-heading"></h2>
+            <p id="popup-info"></p>
+        </div>
+    </div>
+
+    <!--Link to external Javascript sheet-->
+    <script src="dlc.js"></script>
+</body>
+</html>
