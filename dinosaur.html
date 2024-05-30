@@ -1,180 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dinosaurs</title>
-    <!--Link to external stylesheet-->
-    <link rel="stylesheet" href="dinostyle.css" />
-  </head>
-  <body>
-    <!--Header-->
-    <header>
-      <div class="position">
-        <!--Navbar creation-->
-        <nav class="navbar">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="dinosaur.html">Dinosaurs</a></li>
-            <li><a href="game.html">Games</a></li>
-            <li><a href="dlc.html">DLC</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dinosaurs</title>
+  <!--Link to external stylesheet-->
+  <link rel="stylesheet" href="dinostyle.css" />
+</head>
+<body>
+  <!--Header-->
+  <header>
+    <div class="position">
+      <!--Navbar creation-->
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="dinosaur.html">Dinosaurs</a></li>
+          <li><a href="game.html">Games</a></li>
+          <li><a href="dlc.html">DLC</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <!--Heading-->
-    <div id="database">
-      <h1 class="main">Dinosaurs</h1>
-
+  <!--Heading-->
+  <div id="database">
+    <h1 class="main">Dinosaurs</h1>
+    <div class="gallery-container">
+      <!--Arrows-->
+      <button class="arrow left-arrow" onclick="scrollGallery(-1)">&#10094;</button>
+      
       <div class="gallery1">
-        <div class="grid">
-          <!--Image 1-->
+        <!--Image 1-->
+        <div class="grid" onclick="openModal('brachiosaurus')">
           <img src="brachiosaurus.jpg" alt="brachiosaurus" />
           <div class="data">
             <h2>Brachiosaurus</h2>
-            <p>
-              The <span>Brachiosaurus</span>: Thanks to its long neck,
-              Brachiosaurus can feed on leaves from trees up to 12 metres high,
-              eating up to 400kg of vegetation every day.
-            </p>
           </div>
         </div>
-        <div class="grid">
-          <!--Image 2-->
+        <!--Image 2-->
+        <div class="grid" onclick="openModal('triceratops')">
           <img src="triceratops.jpg" alt="triceratops" />
           <div class="data">
             <h2>Triceratops</h2>
-            <p>
-              The <span>Triceratops</span>: Notable for its large frill and the
-              three horns on its head – which give rise to its name, which
-              translates to ‘three-horned face
-            </p>
           </div>
         </div>
-        <div class="grid">
-          <!--Image 3-->
+        <!--Image 3-->
+        <div class="grid" onclick="openModal('stegosaurus')">
           <img src="stegosaurus.jpg" alt="stegosaurus" />
           <div class="data">
             <h2>Stegosaurus</h2>
-            <p>
-              The <span>Stegosaurus</span>: The long spikes on its tail allow it
-              to lash out at attackers, although the back plates are believed to
-              be for display when attracting a mate.
-            </p>
           </div>
         </div>
-        <div class="grid">
-          <!--Image 4-->
+        <!--Image 4-->
+        <div class="grid" onclick="openModal('trex')">
           <img src="trex.png" alt="t-rex" />
           <div class="data">
             <h2>T-Rex</h2>
-            <p>
-              The <span>T-Rex</span>: Tyrannosaurus rex was the apex predator of
-              its time, with the most powerful jaw known to science and rows of
-              large, serrated teeth.
-            </p>
           </div>
         </div>
-        <div class="grid">
-          <!--Image 5-->
+        <!--Image 5-->
+        <div class="grid" onclick="openModal('velociraptor')">
           <img src="velociraptor.jpg" alt="velociraptor" />
           <div class="data">
             <h2>Velociraptor</h2>
-            <p>
-              The <span>Velociraptor</span>: Velociraptor’s reputation as one of
-              the most terrifying dinosaurs comes not from its size – at just 4m
-              in length – but its ferocity and intelligence.
-            </p>
           </div>
         </div>
-        <div class="grid">
-          <!--Image 6-->
+        <!--Image 6-->
+        <div class="grid" onclick="openModal('carnotaurus')">
           <img src="carnotaurus.jpg" alt="carnotaurus" />
           <div class="data">
             <h2>Carnotaurus</h2>
-            <p>
-              The <span>Carnotaurus</span>: The combination of its unique horns
-              and flesh-ripping teeth gave Carnotaurus its name, meaning
-              ‘meat-eating bull’.
-            </p>
           </div>
         </div>
-        <div class="grid">
-          <!--Image 7-->
+        <!--Image 7-->
+        <div class="grid" onclick="openModal('pteranodon')">
           <img src="pteranodon.jpg" alt="pteranodon" />
           <div class="data">
             <h2>Pteranodon</h2>
-            <p>
-              The <span>Pteranodon</span>: Although its diet consists largely of
-              fish, Pteranodon does not have teeth, chewing its prey with its
-              beak
-            </p>
           </div>
         </div>
-        <div class="grid">
-          <!--Image 8-->
+        <!--Image 8-->
+        <div class="grid" onclick="openModal('dimorphodon')">
           <img src="dimorphodon.png" alt="dimorphodon" />
           <div class="data">
             <h2>Dimorphodon</h2>
-            <p>
-              The <span>Dimorphodon</span>: The pterosaur Dimorphodon is notable
-              for the size of its head, which is much bigger than found in
-              similar pterosaurs such as Pterodactylus.
-            </p>
           </div>
         </div>
-        <div class="grid">
-          <!--Image 9-->
+        <!--Image 9-->
+        <div class="grid" onclick="openModal('tapejara')">
           <img src="tapejara.jpg" alt="tapejara" />
           <div class="data">
             <h2>Tapejara</h2>
-            <p>
-              The <span>Tapejara</span>: Easily recognised thanks to its unique
-              appearance, Tapejara is a genus of Pterosaur native to Brazil with
-              a brightly coloured crest on top of its head
-            </p>
           </div>
         </div>
-        <div class="grid">
-          <!--Image 10-->
+        <!--Image 10-->
+        <div class="grid" onclick="openModal('kronosaurus')">
           <img src="kronosaurus.jpg" alt="kronosaurus" />
           <div class="data">
             <h2>Kronosaurus</h2>
-            <p>
-              The <span>Kronosaurus</span>: Kronosaurus is a marine reptile from
-              the pliosaur family dating back to the Early Cretaceous period and
-              takes its name from the Greek god Kronos.
-            </p>
           </div>
         </div>
-        <div class="grid">
-          <!--Image 11-->
+        <!--Image 11-->
+        <div class="grid" onclick="openModal('ichthyosaurus')">
           <img src="ichthyosaurus.jpg" alt="ichthyosaurus" />
           <div class="data">
             <h2>Ichthyosaurus</h2>
-            <p>
-              The <span>Ichthyosaurus</span>: Its paddle-like limbs and
-              streamlined body allow it to move at great speed through water,
-              catching its prey in its long, thin snout.
-            </p>
           </div>
         </div>
-        <div class="grid">
-          <!--Image 12-->
+        <!--Image 12-->
+        <div class="grid" onclick="openModal('attenborosaurus')">
           <img src="attenborosaurus.jpg" alt="attenborosaurus" />
           <div class="data">
-            <h2>Atteborosaurus</h2>
-            <p>
-              The <span>Atteborosaurus</span>: Named after the esteemed British
-              natural historian David Attenborough, Attenborosaurus is a genus
-              of pliosaurid that grows up to 6.4m in length.
-            </p>
+            <h2>Attenborosaurus</h2>
           </div>
         </div>
+        <button class="arrow right-arrow" onclick="scrollGallery(1)">&#10095;</button>
       </div>
     </div>
-  </body>
+  </div>
+  
+  <!-- Modal Structure -->
+  <div id="myModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+      <img id="modalImage" src="" alt="" />
+      <div class="modal-text">
+        <h2 id="modalTitle"></h2>
+        <p id="modalDescription"></p>
+      </div>
+    </div>
+  </div>
+
+  <!--Link to external Javascript file-->
+  <script src="dinomodal.js"></script>
+</body>
 </html>

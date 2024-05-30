@@ -1,6 +1,6 @@
 * {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   font-family: sans-serif;
 }
 
@@ -10,14 +10,14 @@
 }
 
 .navbar {
-  text-align: center; 
+  text-align: center;
 }
 
 .navbar ul {
   list-style-type: none;
   overflow: hidden;
   height: 90px;
-  display: inline-block; 
+  display: inline-block;
 }
 
 .navbar a {
@@ -29,11 +29,11 @@
   font-weight: bold;
   font-family: 'Courier New', Courier, monospace;
 }
-  
+
 .navbar a:hover {
   background-color: rgb(137, 137, 226);
 }
-  
+
 .navbar li {
   float: left;
 }
@@ -47,7 +47,7 @@
 }
 
 .main {
-  font-size: xx-large;
+  font-size: xx-large; 
   font-family: 'Times New Roman', Times, serif;
   font-weight: bolder;
   color: white;
@@ -70,7 +70,8 @@
   box-shadow: 5px 5px 20px black;
   overflow: hidden;
   background: transparent;
-  position: relative; 
+  position: relative;
+  cursor: pointer;
 }
 
 img {
@@ -82,15 +83,15 @@ img {
 }
 
 .data {
-  height: 200px;
+  height: 100px;
   width: 350px;
   padding: 6px;
   box-sizing: border-box;
   position: absolute;
   bottom: 0;
-  background: rgba(27, 27, 27, 0.5);
+  background: rgba(27, 27, 27, 0.7);
   color: white;
-  transition: height 0.5s;
+  text-align: center;
 }
 
 h2 {
@@ -98,45 +99,95 @@ h2 {
   font-size: 40px;
 }
 
-p {
-  font-size: 20px;
-  margin: 20px;
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity 0.5s;
-}
-
-span {
-  font-weight: bold;
-}
-
-/*Grid Effects*/
-.grid:hover {
+/* Arrows */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 24px;
   cursor: pointer;
+  transition: color 0.3s;
 }
 
-.grid:hover .data {
-  height: 220px;
-  background: rgba(0, 0, 0, 0.5);
+.arrow:hover {
+  color: rgba(255, 255, 255, 0.7);
 }
 
-.grid:hover p {
-  opacity: 1;
-  visibility: visible;
+.left-arrow {
+  left: 10px;
 }
 
-.grid:hover img {
-  transform: scale(1.1) rotate(-3deg);
+.right-arrow {
+  right: 10px;
 }
 
 /* Slide In Animation */
 @keyframes slideInRight {
   from {
-      transform: translateX(100%);
-      opacity: 0;
+    transform: translateX(100%);
+    opacity: 0;
   }
   to {
-      transform: translateX(0);
-      opacity: 1;
+    transform: translateX(0);
+    opacity: 1;
   }
+}
+
+/* Pop Up Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+  position: relative;
+  margin: 5% auto;
+  padding: 20px;
+  width: 80%;
+  max-width: 700px;
+  background-color: rgba(255, 255, 255, 0.2); 
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.modal-content img {
+  width: 100%;
+  max-width: 1000px;
+  border-radius: 10px;
+}
+
+.modal-text {
+  margin-top: 20px;
+  text-align: center;
+  color: white; 
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
 }
