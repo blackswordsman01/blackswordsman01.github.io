@@ -124,7 +124,7 @@ h2 {
   right: 10px;
 }
 
-/* Slide In Animation */
+/* Animation */
 @keyframes slideInRight {
   from {
     transform: translateX(100%);
